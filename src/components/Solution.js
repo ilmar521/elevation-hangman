@@ -1,13 +1,12 @@
+import Letter from "./Letter";
 
-function Solution() {
-
-    const hideLetters = ['_','_','_','_']
+function Solution({solution, letterStatus}) {
 
     return (
         <div>
-            {hideLetters.map(l => <span> {l} </span>)}
+            {solution.word.split('').map(letter => (<Letter letter={letterStatus[letter] ? letter : '_ '}/>))}
             <div>
-                <em>Your ideal mood when coding.</em>
+                <em>{solution.hint}</em>
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
 import Letter from "./Letter";
 
-function Letters() {
+function Letters({letterStatus, changeStatus}) {
 
     return (
         <div>
             <div>Available Letters</div>
-            <Letter/>
+            {Object.keys(letterStatus).map(letter => (<Letter letter={letter} selected={letterStatus[letter]} changeStatus={changeStatus}/>))}
         </div>
     )
 }

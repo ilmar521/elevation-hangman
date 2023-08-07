@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.selected {
+  text-decoration: line-through;
+}
+
+.high-score {
+  color: green;
+}
+
+.medium-score {
+  color: orange;
+}
+
+.low-score {
+  color: red;
+}
+
+.end-game-message {
+  font-size: 30px;
+  font-weight: bold;
+}

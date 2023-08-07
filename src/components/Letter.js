@@ -1,8 +1,12 @@
 
-function Letter() {
+function Letter({letter, selected, changeStatus}) {
+
+    const handleClick = () => {
+        changeStatus(letter);
+    }
 
     return (
-        <span>a</span>
+        <span className={selected ? 'selected' : null} onClick={selected ? null : handleClick}>{letter}</span>
     )
 }
 
